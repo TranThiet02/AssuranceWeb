@@ -1,0 +1,158 @@
+/* ── Page ─────────────────────────────────────────────────── */
+.page {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ── Header ───────────────────────────────────────────────── */
+.header { margin-bottom: 24px; }
+.header h1 { font-size: 20px; font-weight: 700; color: #fff; }
+.header p  { font-size: 13px; color: #64748b; margin-top: 2px; }
+
+/* ── Filters ──────────────────────────────────────────────── */
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filterBtn {
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  border: 1px solid #334155;
+  background-color: #1e293b;
+  color: #94a3b8;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.filterBtn:hover { color: #fff; border-color: #475569; }
+.filterBtn.active { background-color: #2563eb; border-color: #2563eb; color: #fff; }
+
+.dateInput {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  color: #94a3b8;
+  border-radius: 12px;
+  padding: 8px 14px;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.dateInput:focus { border-color: rgba(59,130,246,0.6); }
+
+.clearBtn {
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  border: 1px solid #334155;
+  background: none;
+  color: #64748b;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.clearBtn:hover { color: #fff; }
+
+/* ── Stats ────────────────────────────────────────────────── */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 640px) {
+  .stats { grid-template-columns: repeat(2, 1fr); }
+}
+
+.statCard {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+.statCard p:first-child { font-size: 12px; color: #64748b; margin-bottom: 4px; }
+.statTotal   { font-size: 22px; font-weight: 700; color: #fff; }
+.statGreen   { font-size: 22px; font-weight: 700; color: #4ade80; }
+.statRed     { font-size: 22px; font-weight: 700; color: #f87171; }
+.statBlue    { font-size: 22px; font-weight: 700; color: #60a5fa; }
+
+/* ── Table ────────────────────────────────────────────────── */
+.tableWrapper {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.table { width: 100%; border-collapse: collapse; }
+
+.table thead tr { border-bottom: 1px solid #334155; }
+
+.table th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 14px 20px;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #263044;
+  transition: background-color 0.15s;
+}
+
+.table tbody tr:last-child { border-bottom: none; }
+.table tbody tr:hover { background-color: rgba(51,65,85,0.4); }
+.table td { padding: 12px 20px; font-size: 13px; }
+
+.emailText  { color: #fff; }
+.dateText   { color: #64748b; }
+.noteText   { color: #64748b; }
+
+/* Badges */
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 8px;
+  border: 1px solid;
+}
+
+.badgeLogin   { background: rgba(34,197,94,0.1);   color: #4ade80; border-color: rgba(34,197,94,0.2); }
+.badgeLogout  { background: #334155; color: #94a3b8; border-color: #475569; }
+.badgeFailed  { background: rgba(239,68,68,0.1);   color: #f87171; border-color: rgba(239,68,68,0.2); }
+.badgeReset   { background: rgba(234,179,8,0.1);   color: #facc15; border-color: rgba(234,179,8,0.2); }
+.badgeRefresh { background: rgba(59,130,246,0.1);  color: #60a5fa; border-color: rgba(59,130,246,0.2); }
+
+/* Empty / loading */
+.tableCenter {
+  text-align: center;
+  padding: 48px;
+  color: #475569;
+  font-size: 13px;
+}
+
+.spinner {
+  width: 24px; height: 24px;
+  border: 2px solid #334155;
+  border-top-color: #3b82f6;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.tableFooter { font-size: 12px; color: #475569; margin-top: 12px; }
